@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learning DOM</title>
+</head>
+<body style="background-color: black; color: peachpuff;">
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+    </ul>
+</body>
+<script>
+    //ADDING ELEMENT 
+    // 1ST METHOD 
+    // function addlang(langName){
+    //     const li = document.createElement('li')
+    //     li.innerHTML = `${langName}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addlang("PYHTON IS BEST")
+    
+    // 2ND METHOD 
+    function addlang(langName){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+        }
+    addlang("PYHTON")
+    addlang("GO")
+    addlang("RUST")
+
+
+    // EDIT 
+    const secondlang = document.querySelector("li:nth-child(3)")
+    // secondlang.innerHTML = "RUBY"
+    const newli = document.createElement('li')
+    newli.textContent = "RUBY"
+    secondlang.replaceWith(newli)
+    newli.style.color = "red"
+
+    // EDIT
+    const firstlang = document.querySelector("li:first-child")
+    firstlang.outerHTML = "<li>REACT</li>"
+
+    // REMOVING
+    const lastlang = document.querySelector("li:last-child")
+    lastlang.remove()
+</script>
+</html>
