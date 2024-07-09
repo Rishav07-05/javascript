@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+</head>
+<body style="background-color: black; color: blanchedalmond;">
+    <h1>Amazing Photos</h1>
+    <ul id="main">
+        <li><img src="https://images.unsplash.com/photo-1636910824657-4be41fdf713a?q=80&w=1035&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="cute dog" height="100px" class="dog"></li>
+
+        <li><img src="https://images.unsplash.com/photo-1613685396238-852abd2b6d36?q=80&w=986&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="cute cat" height="100px" class="cat"></li>
+
+        <li><img src="https://images.unsplash.com/photo-1720210534279-ac8c50a53e82?q=80&w=1375&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="owl" height="100px" class="owl"></li>
+
+        <li><img src="https://plus.unsplash.com/premium_photo-1661847643150-4e06569d2ec1?q=80&w=968&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="tiger" height="100px" class="tiger"></li>
+
+        <li><img src="https://plus.unsplash.com/premium_photo-1661818927968-c15e78ea3c5a?q=80&w=871&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Vulture" height="100px" class="vulture"></li>
+
+        <li> <a style="color: blanchedalmond;" href="https://github.com/Rishav07-05" id="github">My github</a></li>
+        
+    </ul>
+</body>
+
+<script>
+    // document.querySelector('.dog').addEventListener('click' , function(e){
+    //     console.log(e);
+    // }, false)
+    // type , timestamp , defaultPrevented 
+    // target , toElement, srcElement, currentTarget,
+    //clientX, clientY, screenX, screenY
+    // altkey, ctrlkey. shiftKey, KeyCode
+
+    // document.querySelector('#github').addEventListener('click' , function(e){
+    //     e.preventDefault()
+    //     console.log("Clicked");
+    // })
+
+    document.querySelector('#main').addEventListener('click' , function(e){
+        console.log(e);
+        let m =  e.target.tagName;
+        if(m === 'IMG'){
+        e.target.parentNode.remove()
+        }
+    })
+
+</script>
+
+</html>
