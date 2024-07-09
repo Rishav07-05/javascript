@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Asyncs</title>
+</head>
+<body style="color: white; background-color: black;">
+    <h1>Hello Rishav</h1>
+    <button id="stop">STOP</button>
+</body>
+
+    <script>
+        const sayBatman = function(){
+            console.log("YOU ARE BATMAN");
+            document.querySelector('h1').innerHTML = 'YOU ARE BATMAN'
+        }
+        const namechanged = setTimeout(sayBatman , 3000)
+
+        document.querySelector('#stop').addEventListener(
+            'click',function(){
+                clearTimeout(namechanged)
+                console.log("Stopped");
+            },false
+        )
+    </script>
+</html>
