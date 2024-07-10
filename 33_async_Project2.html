@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Virtual Keyboard</title>
+</head>
+<body style="background-color: black; color: rgb(91, 151, 219); width: 100%;">
+    <div class="main" style="display: flex; justify-content: center;">
+        <div id="insert">
+            <div class="key">Press the key and watch the magic</div>
+        </div>
+    </div>
+</body>
+<script>
+    const insert = document.querySelector('#insert')
+    window.addEventListener('keydown' , (e) => {
+        insert.innerHTML = `
+        <div class = 'color'><table>
+  <tr>
+    <th>Key &nbsp</th>
+    <th>KeyCode &nbsp</th>
+    <th>Code &nbsp</th>
+  </tr>
+  <tr>
+    <td>${e.key} &nbsp</td>
+    <td>${e.keyCode} &nbsp</td>
+    <td>${e.code} &nbsp</td>
+  </tr>
+  <tr>
+</div>`
+
+    })
+</script>
+</html>
